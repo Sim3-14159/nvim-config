@@ -6,21 +6,21 @@ return {
       opts.options = opts.options or {}
       opts.options.theme = {
         normal = {
-          a = { bg = "#FF8C00", fg = "#111111", gui = "bold" }, -- Warm Amber for Normal mode
+          a = { bg = "#FF8C00", fg = "#111111", gui = "bold" },
           b = { bg = "#252526", fg = "#CCCCCC" },
           c = { bg = "#111111", fg = "#CCCCCC" },
         },
         insert = {
-          a = { bg = "#00FF00", fg = "#111111", gui = "bold" }, -- Bright Green for Insert mode
+          a = { bg = "#00FF00", fg = "#111111", gui = "bold" },
         },
         visual = {
-          a = { bg = "#FF007F", fg = "#FFFFFF", gui = "bold" }, -- Pink/Magenta for Visual mode
+          a = { bg = "#FF007F", fg = "#FFFFFF", gui = "bold" },
         },
         replace = {
-          a = { bg = "#FF3D00", fg = "#111111", gui = "bold" }, -- Orange-Red for Replace mode
+          a = { bg = "#FF3D00", fg = "#111111", gui = "bold" },
         },
         command = {
-          a = { bg = "#FFFF00", fg = "#111111", gui = "bold" }, -- Yellow for Command mode
+          a = { bg = "#FFFF00", fg = "#111111", gui = "bold" },
         },
         inactive = {
           a = { bg = "#111111", fg = "#666666" },
@@ -31,7 +31,7 @@ return {
     end,
   },
 
-  -- Colorscheme configuration
+  -- Colorscheme and Diagnostic Configuration
   {
     "Mofiqul/vscode.nvim",
     lazy = false,
@@ -54,9 +54,20 @@ return {
       hl(0, "SignColumn", { bg = "#111111" })
 
       -- Maximum brightness Git signs
-      hl(0, "GitSignsAdd", { fg = "#00FF00", bold = true }) -- Pure Green
-      hl(0, "GitSignsChange", { fg = "#00FFFF", bold = true }) -- Pure Cyan
-      hl(0, "GitSignsDelete", { fg = "#FF0000", bold = true }) -- Pure Red
+      hl(0, "GitSignsAdd", { fg = "#00FF00", bold = true })       -- Pure Green
+      hl(0, "GitSignsChange", { fg = "#00FFFF", bold = true })    -- Pure Cyan
+      hl(0, "GitSignsDelete", { fg = "#FF0000", bold = true })    -- Pure Red
+
+      -- Warm border highlight for popup windows
+      hl(0, "FloatBorder", { fg = "#FF8C00", bg = "#111111" })
+
+      -- Set rounded borders on diagnostic popups
+      vim.diagnostic.config({
+        float = {
+          border = "rounded",
+          source = "always",
+        },
+      })
     end,
   },
 
