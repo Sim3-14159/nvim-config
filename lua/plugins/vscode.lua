@@ -28,6 +28,8 @@ return {
           c = { bg = "#000000", fg = "#666666" },
         },
       }
+
+      table.insert(opts.sections.lualine_y, { "filetype", icon = false })
     end,
   },
 
