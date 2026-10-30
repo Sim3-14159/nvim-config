@@ -4,3 +4,5 @@
 
 vim.opt.colorcolumn = "100"
 vim.opt.winborder = "rounded"
+vim.opt.title = true
+vim.opt.titlestring = " %t"
