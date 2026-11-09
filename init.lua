@@ -33,6 +33,7 @@ vim.api.nvim_create_autocmd("BufNewFile", {
         ["{{_email_}}"] = "EMAIL",
         ["{{_date_}}"] = os.date("%Y-%m-%d"),
         ["{{_file_name_}}"] = filename,
+        ["{{_file_prefix_}}"] = string.match(filename, "^([^.]*)"),
         ["{{_year_}}"] = os.date("%Y"),
       }
 
