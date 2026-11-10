@@ -3,6 +3,7 @@ vim.g["conjure#log#hud#open_before_first_eval"] = false -- get rid of "sponsored
 require("config.lazy")
 vim.opt.title = true
 vim.opt.titlestring = " %t"
+vim.opt.conceallevel = 2 -- Hides markdown markers and styles headings
 
 vim.api.nvim_create_autocmd("BufNewFile", {
   group = vim.api.nvim_create_augroup("auto_templates", { clear = true }),
