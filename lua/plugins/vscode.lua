@@ -110,11 +110,9 @@ return {
             bg = "#330000",
           })
 
-          -- Warm popup borders
-          -- hl(0, "FloatBorder", {
-          --   fg = "#FF8C00",
-          --   bg = "#111111",
-          -- })
+          hl(0, "FloatBorder", {
+            bg = "#111111",
+          })
         end,
       })
 
@@ -131,23 +129,23 @@ return {
       -- These are deliberately NOT warm/muted. They make programs
       -- using ANSI colors inside Neovim's terminal retain strong,
       -- recognizable colors.
-      vim.g.terminal_color_0 = "#111111" -- black
-      vim.g.terminal_color_1 = "#FF0000" -- red
-      vim.g.terminal_color_2 = "#00FF00" -- green
-      vim.g.terminal_color_3 = "#FFFF00" -- yellow
-      vim.g.terminal_color_4 = "#0000FF" -- blue
-      vim.g.terminal_color_5 = "#FF00FF" -- magenta
-      vim.g.terminal_color_6 = "#00FFFF" -- cyan
-      vim.g.terminal_color_7 = "#FFFFFF" -- white
+      vim.g.terminal_color_0 = "#0f0f0f" -- black
+      vim.g.terminal_color_1 = "#a51d2d" -- red
+      vim.g.terminal_color_2 = "#278136" -- green
+      vim.g.terminal_color_3 = "#e5a50a" -- yellow
+      vim.g.terminal_color_4 = "#1a5fb4" -- blue
+      vim.g.terminal_color_5 = "#a523a5" -- magenta
+      vim.g.terminal_color_6 = "#199c8f" -- cyan
+      vim.g.terminal_color_7 = "#77767b" -- white
 
-      vim.g.terminal_color_8 = "#666666" -- bright black
-      vim.g.terminal_color_9 = "#FF5555" -- bright red
-      vim.g.terminal_color_10 = "#55FF55" -- bright green
-      vim.g.terminal_color_11 = "#FFFF55" -- bright yellow
-      vim.g.terminal_color_12 = "#5555FF" -- bright blue
-      vim.g.terminal_color_13 = "#FF55FF" -- bright magenta
-      vim.g.terminal_color_14 = "#55FFFF" -- bright cyan
-      vim.g.terminal_color_15 = "#FFFFFF" -- bright white
+      vim.g.terminal_color_8 = "#3d3846" -- bright black
+      vim.g.terminal_color_9 = "#ff0000" -- bright red
+      vim.g.terminal_color_10 = "#00ff00" -- bright green
+      vim.g.terminal_color_11 = "#ffff00" -- bright yellow
+      vim.g.terminal_color_12 = "#5c5cff" -- bright blue
+      vim.g.terminal_color_13 = "#ff00ff" -- bright magenta
+      vim.g.terminal_color_14 = "#00ffff" -- bright cyan
+      vim.g.terminal_color_15 = "#ffffff" -- bright white
     end,
   },
 

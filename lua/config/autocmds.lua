@@ -27,3 +27,15 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.formatoptions:append("r")
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "norg",
+  callback = function(args)
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true
+    vim.opt_local.breakindent = true
+
+    -- Disable minimap for .norg files
+    require("neominimap.api").buf.disable(args.buf)
+  end,
+})

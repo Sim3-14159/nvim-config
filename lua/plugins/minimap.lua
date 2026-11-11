@@ -45,5 +45,22 @@ return {
     vim.g.neominimap = {
       auto_enable = true,
     }
+
+    vim.g.neominimap = {
+      auto_enable = true,
+
+      -- float = {
+      --   window_border = {
+      --     "", -- Top-left
+      --     "", -- Top
+      --     "", -- Top-right
+      --     "", -- Right
+      --     "", -- Bottom-right
+      --     "", -- Bottom
+      --     "", -- Bottom-left
+      --     "│", -- Left
+      --   },
+      -- },
+    }
   end,
 }
