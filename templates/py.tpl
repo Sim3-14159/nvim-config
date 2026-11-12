@@ -4,8 +4,8 @@ File: {{_file_name_}}
 Author: {{_author_}}
 """
 
-import sys
 import os
+import sys
 
 
 def main():

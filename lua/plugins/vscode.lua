@@ -42,7 +42,7 @@ return {
       transparent = false,
       italic_comments = true,
       color_overrides = {
-        vscBack = "#111111",
+        vscBack = "#0e0e0e",
       },
     },
 

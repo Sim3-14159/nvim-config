@@ -1,6 +1,7 @@
 return {
   {
     "3rd/image.nvim",
+    cond = vim.env.KITTY_SCROLLBACK_NVIM ~= "true",
     dependencies = { "vhyrro/luarocks.nvim" }, -- Required for luarocks image bindings
     opts = {
       backend = "kitty", -- Force the kitty graphics protocol backend
