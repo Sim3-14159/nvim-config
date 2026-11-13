@@ -1,6 +1,7 @@
 return {
   {
     "3rd/image.nvim",
+    ft = { "norg", "markdown" },
     cond = vim.env.KITTY_SCROLLBACK_NVIM ~= "true",
     dependencies = { "vhyrro/luarocks.nvim" }, -- Required for luarocks image bindings
     opts = {
@@ -11,6 +12,9 @@ return {
           clear_in_cursor_leaf = true,
           download_remote_images = true,
           only_render_image_at_cursor = false,
+        },
+        norg = {
+          enabled = true,
         },
       },
       max_width = 100,

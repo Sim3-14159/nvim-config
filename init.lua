@@ -52,6 +52,8 @@ vim.api.nvim_create_autocmd("BufNewFile", {
   end,
 })
 
+
+
 -- NOTE: Uncomment this if you see random garbage at startup
 -- https://github.com/neovim/neovim/issues/40988
 --vim.g.termfeatures = vim.g.termfeatures or {}

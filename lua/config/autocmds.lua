@@ -38,6 +38,9 @@ vim.api.nvim_create_autocmd("FileType", {
 
     -- Disable minimap for .norg files
     require("neominimap.api").buf.disable(args.buf)
+
+    vim.opt.colorcolumn = "" -- No endline for .norg files
+    vim.cmd("Neorg render-latex")
   end,
 })
 
@@ -120,3 +123,33 @@ vim.api.nvim_create_autocmd({ "FocusLost", "BufLeave" }, {
     end
   end,
 })
+
+-- Background colors for inline error messages
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = function()
+    -- Set background and text color for inline errors
+    vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", { bg = "#3b1d22", fg = "#f38ba8" })
+
+    -- Optional: Configure other inline diagnostic levels to match
+    vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { bg = "#3b321d", fg = "#f9e2af" })
+    vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", { bg = "#1d2d3b", fg = "#89b4fa" })
+    vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { bg = "#1d3b32", fg = "#94e2d5" })
+
+    -- Replace "#4d3800" with your preferred hex background color
+    vim.api.nvim_set_hl(0, "NeominimapWarnLine", { bg = "#3b321d" })
+    vim.api.nvim_set_hl(0, "NeominimapErrorLine", { bg = "#3b1d22" })
+  end,
+})
+
+-- Set background and text color for inline errors
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", { bg = "#3b1d22", fg = "#f38ba8" })
+
+-- Optional: Configure other inline diagnostic levels to match
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { bg = "#3b321d", fg = "#f9e2af" })
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", { bg = "#1d2d3b", fg = "#89b4fa" })
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { bg = "#1d3b32", fg = "#94e2d5" })
+
+-- Replace "#4d3800" with your preferred hex background color
+vim.api.nvim_set_hl(0, "NeominimapWarnLine", { bg = "#3b321d" })
+vim.api.nvim_set_hl(0, "NeominimapErrorLine", { bg = "#3b1d22" })
