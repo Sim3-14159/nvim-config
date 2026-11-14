@@ -40,7 +40,7 @@ vim.api.nvim_create_autocmd("FileType", {
     require("neominimap.api").buf.disable(args.buf)
 
     vim.opt.colorcolumn = "" -- No endline for .norg files
-    vim.cmd("Neorg render-latex")
+    -- vim.cmd("Neorg render-latex")
   end,
 })
 
