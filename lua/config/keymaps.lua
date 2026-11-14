@@ -9,5 +9,25 @@ vim.api.nvim_create_autocmd("FileType", {
       buffer = event.buf,
       desc = "Neorg: Cycle Todo Item",
     })
+
+    vim.api.nvim_create_user_command("NeorgClearDone", function()
+      local bufnr = vim.api.nvim_get_current_buf()
+      local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
+      local new_lines = {}
+      local count = 0
+
+      for _, line in ipairs(lines) do
+        if line:match("%-%s*%(%[%_x%]%)") then
+          count = count + 1
+        else
+          table.insert(new_lines, line)
+        end
+      end
+
+      vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, new_lines)
+      print("Removed " .. count .. " completed tasks!")
+    end, { desc = "Remove completed (x) tasks" })
+
+    vim.keymap.set("n", "<LocalLeader>nd", ":NeorgClearDone<CR>", { silent = true })
   end,
 })

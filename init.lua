@@ -52,7 +52,7 @@ vim.api.nvim_create_autocmd("BufNewFile", {
   end,
 })
 
-
+require("session_servers").setup() -- Set up :Connect and :Detach
 
 -- NOTE: Uncomment this if you see random garbage at startup
 -- https://github.com/neovim/neovim/issues/40988

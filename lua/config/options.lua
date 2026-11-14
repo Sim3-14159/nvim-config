@@ -2,6 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+vim.opt.exrc = true
 vim.opt.colorcolumn = "100" -- Vertical line after 100 chars
 vim.opt.winborder = "rounded"
 vim.opt.title = true

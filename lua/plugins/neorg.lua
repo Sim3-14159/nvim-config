@@ -12,6 +12,11 @@ return {
       require("neorg").setup({
         load = {
           ["core.defaults"] = {},
+          ["core.tangle"] = {
+            config = {
+              tangle_on_write = true, -- Automatically syncs code blocks when saving the .norg file
+            },
+          },
           ["core.integrations.image"] = {},
           ["core.highlights"] = {
             config = {
@@ -32,7 +37,7 @@ return {
           },
           ["core.concealer"] = {
             config = {
-              icon_preset = "varied", -- Options: "basic", "diamond", "folded"
+              icon_preset = "varied", -- Options: "basic", "diamond", "varied"
               icons = {
                 code_block = {
                   conceal = true,
